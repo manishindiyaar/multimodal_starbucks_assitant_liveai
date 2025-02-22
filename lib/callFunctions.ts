@@ -1,5 +1,5 @@
 'use client';
-import { UltravoxSession, UltravoxSessionStatus, Transcript, UltravoxExperimentalMessageEvent, Role } from 'ultravox-client';
+import { UltravoxSession, UltravoxSessionStatus, Transcript, UltravoxExperimentalMessageEvent, Role, UltravoxSessionConfig } from 'ultravox-client';
 import { JoinUrlResponse, CallConfig } from '@/lib/types';
 import { updateOrderTool, highlightProductTool } from '@/lib/clientTools';
 
@@ -11,6 +11,10 @@ interface CallCallbacks {
   onTranscriptChange: (transcripts: Transcript[] | undefined) => void;
   onDebugMessage?: (message: UltravoxExperimentalMessageEvent ) => void;
 }
+
+
+
+
 
 export function toggleMute(role: Role): void {
 
@@ -77,9 +81,9 @@ export async function startCall(callbacks: CallCallbacks, callConfig: CallConfig
       onStatusChange: (status) => callbacks.onStatusChange(status),
       onTranscriptChange: (transcripts) => callbacks.onTranscriptChange(transcripts),
       onDebugMessage: (msg) => callbacks.onDebugMessage?.(msg)
-    });
+  } as UltravoxSessionConfig);
 
-    // Register our tools
+    // // Register our tools
     uvSession.registerToolImplementation("updateOrder", updateOrderTool);
     uvSession.registerToolImplementation("highlightProduct", highlightProductTool);
 

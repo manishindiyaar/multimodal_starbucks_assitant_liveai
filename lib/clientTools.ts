@@ -23,7 +23,7 @@ export const highlightProductTool: ClientToolImplementation = (parameters) => {
   // Normalize the product name to match the display names
   const normalizedName = productName.toLowerCase()
     .split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 
   if (typeof window !== "undefined") {
