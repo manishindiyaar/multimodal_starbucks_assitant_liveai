@@ -15,25 +15,29 @@ const ProductDisplay: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<'donut' | 'drink'>('donut');
   const [products, setProducts] = useState<Product[]>([
     // Donuts
-    { name: 'Pumpkin Spice Iced Doughnut', image: '/images/products/pumpkin-iced.svg', isHighlighted: false, type: 'donut', price: 1.29 },
-    { name: 'Pumpkin Spice Cake Doughnut', image: '/images/products/pumpkin-cake.svg', isHighlighted: false, type: 'donut', price: 1.29 },
-    { name: 'Old Fashioned Doughnut', image: '/images/products/old-fashioned.svg', isHighlighted: false, type: 'donut', price: 1.29 },
-    { name: 'Chocolate Iced Doughnut', image: '/images/products/chocolate.svg', isHighlighted: false, type: 'donut', price: 1.09 },
-    { name: 'Chocolate Iced Doughnut with Sprinkles', image: '/images/products/chocolate-sprinkles.svg', isHighlighted: false, type: 'donut', price: 1.09 },
-    { name: 'Raspberry Filled Doughnut', image: '/images/products/raspberry.svg', isHighlighted: false, type: 'donut', price: 1.09 },
-    { name: 'Blueberry Cake Doughnut', image: '/images/products/blueberry.svg', isHighlighted: false, type: 'donut', price: 1.09 },
-    { name: 'Strawberry Iced Doughnut with Sprinkles', image: '/images/products/strawberry.svg', isHighlighted: false, type: 'donut', price: 1.09 },
-    { name: 'Lemon Filled Doughnut', image: '/images/products/lemon.svg', isHighlighted: false, type: 'donut', price: 1.09 },
-    { name: 'Doughnut Holes', image: '/images/products/holes.svg', isHighlighted: false, type: 'donut', price: 3.99 },
-    // Drinks
-    { name: 'Pumpkin Spice Coffee', image: '/images/products/pumpkin-coffee.svg', isHighlighted: false, type: 'drink', price: 2.59 },
-    { name: 'Pumpkin Spice Latte', image: '/images/products/pumpkin-latte.svg', isHighlighted: false, type: 'drink', price: 4.59 },
-    { name: 'Regular Brewed Coffee', image: '/images/products/coffee.svg', isHighlighted: false, type: 'drink', price: 1.79 },
-    { name: 'Decaf Brewed Coffee', image: '/images/products/coffee.svg', isHighlighted: false, type: 'drink', price: 1.79 },
-    { name: 'Latte', image: '/images/products/latte.svg', isHighlighted: false, type: 'drink', price: 3.49 },
-    { name: 'Cappuccino', image: '/images/products/cappuccino.svg', isHighlighted: false, type: 'drink', price: 3.49 },
-    { name: 'Caramel Macchiato', image: '/images/products/caramel-macchiato.svg', isHighlighted: false, type: 'drink', price: 3.49 }
-  ]);
+    { name: 'Avocado Spread', image: '/fooditems/AvacadoSpread.jpeg', isHighlighted: false, type: 'donut', price: 0.95 },
+  { name: 'Baked Apple Croissant', image: '/fooditems/BakedAppleCroissant.jpeg', isHighlighted: false, type: 'donut', price: 3.75 },
+  { name: 'Banana Walnut And Pelican Loaf', image: '/fooditems/BananaWalnutAndPelcanLoaf.jpg', isHighlighted: false, type: 'donut', price: 3.25 },
+  { name: 'Chocolate Croissant', image: '/fooditems/ChocolateCroissant.jpg', isHighlighted: false, type: 'donut', price: 3.45 },
+  { name: 'Cinnamon Coffee Cake', image: '/fooditems/CinammonCoffeeCake.jpeg', isHighlighted: false, type: 'donut', price: 3.95 },
+  { name: 'Glazed Doughnut', image: '/fooditems/GlazedDoughnut.jpeg', isHighlighted: false, type: 'donut', price: 1.95 },
+  { name: 'Ham and Swiss Croissant', image: '/fooditems/HamAndSwissCroissant.jpg', isHighlighted: false, type: 'donut', price: 4.75 },
+  { name: 'Iced Lemon Loaf', image: '/fooditems/IcedLemonLoaf.jpeg', isHighlighted: false, type: 'donut', price: 3.25 },
+  { name: 'Plain Bagel', image: '/fooditems/PlainBagel.jpg', isHighlighted: false, type: 'donut', price: 2.25 },
+  { name: 'Vanilla Bean Custard Danish', image: '/fooditems/VanillaBeanCustardDanish.jpg', isHighlighted: false, type: 'donut', price: 3.75 },
+
+  // Drink Items
+  { name: 'Caramel Apple Spice', image: '/drinkitems/CaramelAppleSpice.jpeg', isHighlighted: false, type: 'drink', price: 3.75 },
+  { name: 'Caramel Brulee Creme Frappuccino', image: '/drinkitems/CaramelBruleeCremeFrappucino.jpeg', isHighlighted: false, type: 'drink', price: 4.95 },
+  { name: 'Chestnut Praline Creme Frappuccino', image: '/drinkitems/ChestnutPralineCremeFrappuccino.jpeg', isHighlighted: false, type: 'drink', price: 4.95 },
+  { name: 'Dragon Drink', image: '/drinkitems/DragonDrink.jpeg', isHighlighted: false, type: 'drink', price: 4.75 },
+  { name: 'Lemonade Starbucks', image: '/drinkitems/LemonadeStarbucks.jpg', isHighlighted: false, type: 'drink', price: 2.95 },
+  { name: 'Mango Dragonfruit Refresher', image: '/drinkitems/MangoDragonfruitRefresher.jpeg', isHighlighted: false, type: 'drink', price: 3.75 },
+  { name: 'Midnight Drink', image: '/drinkitems/MidnightDrink.jpeg', isHighlighted: false, type: 'drink', price: 4.45 },
+  { name: 'Peppermint Hot Chocolate', image: '/drinkitems/PeppermintHotChocolate.jpeg', isHighlighted: false, type: 'drink', price: 3.95 },
+  { name: 'Strawberry Acai Lemonade Refresher', image: '/drinkitems/StrawberryAcaiLemonadeRefreshers.jpg', isHighlighted: false, type: 'drink', price: 3.75 },
+  { name: 'White Hot Chocolate', image: '/drinkitems/WhiteHotChocolate.jpeg', isHighlighted: false, type: 'drink', price: 3.95 }
+    ]);
 
   useEffect(() => {
     const handleProductHighlight = (event: CustomEvent<{ productName: string; action: 'show' | 'hide' }>) => {
@@ -104,7 +108,7 @@ const ProductDisplay: React.FC = () => {
           }`}
           style={{ width: '150px', height: '250px' }}
         >
-          <div className="bg-green-900 shadow-md overflow-hidden h-full flex flex-col">
+          <div className="shadow-md overflow-hidden h-full flex flex-col" style={{backgroundColor: "#1F3832"}}>
             {/* Product Image */}
             <div className="relative h-40 w-full">
               <Image

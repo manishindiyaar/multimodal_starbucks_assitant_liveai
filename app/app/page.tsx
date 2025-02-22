@@ -129,7 +129,7 @@ export default function Home() {
               </div>
 
               {/* Conversation */}
-              <div>
+              {/* <div>
                 <h3 className="text-sm font-medium text-gray-100 mb-2">Conversation</h3>
                 <div 
                   ref={transcriptRef}
@@ -157,7 +157,7 @@ export default function Home() {
                     ))
                   )}
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
