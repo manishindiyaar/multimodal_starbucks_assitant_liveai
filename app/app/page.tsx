@@ -32,7 +32,8 @@ export default function Home() {
     }
   }, [isCallActive]);
 
-  // Start call handler (plays video on loop and starts call)
+  
+
   const handleStartCall = async () => {
     if (videoRef.current) {
       videoRef.current.loop = true; // Enable looping
@@ -42,7 +43,7 @@ export default function Home() {
       await startCall(
         {
           onTranscriptChange: (newTranscripts) => setTranscripts(newTranscripts || []),
-          onStatusChange: (newStatus) => setStatus(newStatus),
+          onStatusChange: (newStatus) => setStatus(newStatus || ''), // Fix applied here
           onDebugMessage: (msg) => console.log('Debug:', msg)
         },
         demoConfig.callConfig,
@@ -53,7 +54,6 @@ export default function Home() {
       console.error('Failed to start call:', error);
     }
   };
-
   // End call handler (stops and resets video)
   const handleEndCall = async () => {
     try {

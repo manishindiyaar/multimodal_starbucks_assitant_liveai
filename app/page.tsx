@@ -3,7 +3,7 @@
 
 import { useRouter } from 'next/navigation'; // For client-side routing in Next.js App Router
 import React from 'react';
-import GoogleAuth  from '@/app/components/GoogleAuth';
+// import GoogleAuth  from '@/app/components/GoogleAuth';
 
 export default function LandingPage() {
   const router = useRouter();
