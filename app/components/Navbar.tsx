@@ -6,6 +6,7 @@ import { useState } from "react"
 import { SetupIcon } from "@/components/setup-icon"
 import { Modal } from "@/components/form-model" 
 import { DisplayInfo } from "@/components/display-form" 
+import Connect from "@/components/connect"
 
 export default function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -74,8 +75,16 @@ export default function Navbar() {
             >
               <SetupIcon /> 
             </button>
+            <div className="ml-4">
+            <Connect/>
+            </div>
+            
           </div>
+          
         </div>
+
+       
+        
 
         {/* DisplayInfo appears below the navbar when visible */}
         {isInfoVisible && (
