@@ -74,36 +74,29 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-100">
       <Navbar/>
-      {/* Header */}
-      {/* <div className="bg-white border-b">
-        <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-xl font-semibold text-gray-900 text-center py-4">
-            Starbucks Interactive & Dynamic AI Website Demo
-          </h1>
-        </div>
-      </div> */}
+    
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 py-6 mt-10">
         <div className="flex gap-6">
           {/* Left Section - Menu (70%) */}
-          <div className="w-[80%]">
+          <div className="w-[70%]">
             <div className="bg-white rounded-lg shadow-sm p-4">
               <ProductDisplay />
             </div>
           </div>
 
           {/* Right Section - Order & Drive-Thru (30%) */}
-          <div className="w-[30%] space-y-6">
+          <div className="w-[30%] space-y-6 m-0 bg-black sticky left-1">
             {/* Order Details */}
-            <div className="bg-white rounded-lg shadow-sm p-6">
-              <h2 className="text-lg font-medium text-gray-900 mb-4">Your Order</h2>
+            <div className="bg-gradient-to-br from-green-400 to-green-800 bg-opacity-75 shadow-inner border-2 border-gray-200 ">
+              <h2 className=" bg-white/80 backdrop-blur-md border border-white/20 shadow-lg mb-4 text-gray-900 rounded-sm p-2 ">Your Order</h2>
               <OrderDetails />
             </div>
 
             {/* Drive-Thru Controls */}
-            <div className="bg-black rounded-lg shadow-sm p-6">
-              <h2 className="text-lg font-medium text-gray-100 mb-4">Assistant Ji</h2>
+            <div className="bg-black rounded-s shadow-sm p-4 ">
+              <h2 className="text-lg text-gray-100 font-thin ">click to order with voice - start ordering</h2>
               
               {/* Call Controls */}
               <div className="mb-4">

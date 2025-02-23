@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { OrderDetailsData, OrderItem } from '@/lib/types';
-import { saveAs } from 'file-saver'; // Install with `npm install file-saver`
+import { saveAs } from 'file-saver'; 
 
 function prepOrderDetails(orderDetailsData: OrderItem[]): OrderDetailsData {
   try {
@@ -62,11 +62,11 @@ const OrderDetails: React.FC = () => {
   const formatOrderItem = (item: OrderItem, index: number) => (
     <div key={index} className="mb-3 pl-4 border-l-2 border-gray-200">
       <div className="flex justify-between items-center">
-        <span className="text-gray-900 font-medium">{item.quantity}x {item.name}</span>
-        <span className="text-gray-900">{formatCurrency(item.price * item.quantity)}</span>
+        <span className="text-gray-100 font-medium">{item.quantity}x {item.name}</span>
+        <span className="text-gray-200">{formatCurrency(item.price * item.quantity)}</span>
       </div>
       {item.specialInstructions && (
-        <div className="text-sm text-gray-600 italic mt-1">
+        <div className="text-sm text-gray-200 italic mt-1">
           Note: {item.specialInstructions}
         </div>
       )}
@@ -100,8 +100,8 @@ const OrderDetails: React.FC = () => {
   return (
     <div>
       {orderDetails.items.length === 0 ? (
-        <div className="text-gray-900 text-sm text-center py-4">
-          Your order is empty. Start by speaking to our virtual assistant!
+        <div className="text-gray-200 text-sm text-center py-4">
+          Your order is empty. Start by speaking to our Kaldi assistant!
         </div>
       ) : (
         <div className="space-y-4">

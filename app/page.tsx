@@ -30,14 +30,28 @@ export default function LandingPage() {
       {/* Main Container */}
       <main className="relative min-h-screen w-full flex flex-col items-center overflow-x-hidden text-gray-800 font-body">
 
-       
+        {/* Background GIF */}
         <div className="absolute inset-0 overflow-hidden">
-          
+          <Image
+            src="/HeroBg.jpg" // Replace with your GIF URL
+            alt="Animated Background"
+            layout="fill"
+            objectFit="cover"
+            className="opacity-40" // Adjust opacity for less distraction
+            priority
+          />
         </div>
 
         {/* ========== HERO SECTION ========== */}
         <section className="relative w-full h-[85vh] flex flex-col justify-center items-center overflow-hidden z-10">
-          
+          {/* Large Hero Background (Placeholder image) */}
+          <Image
+            src=""
+            alt="Hero Background"
+            fill
+            className="object-cover object-center brightness-75 hero-img"
+            priority
+          />
 
           {/* Subtle overlay for text readability */}
           <div className="absolute inset-0 bg-black/40"></div>
@@ -51,7 +65,7 @@ export default function LandingPage() {
               Kaldi
             </h1>
             <p className="text-xl md:text-1m text-white drop-shadow-sm max-w-xl mx-auto mb-8 font-semibold">
-              Let your voice set the table—order made easy.
+              Let your voice set the table—order made easy with ai.
             </p>
             <button
               onClick={handleStartApp}
@@ -70,8 +84,8 @@ export default function LandingPage() {
             width="50"
             height="50"
             viewBox="0 0 512 512"
-            fill="#00FF00"
-            className="opacity-50"
+            fill="#9C5B3C"
+            className="opacity-40"
           >
             <circle cx="256" cy="256" r="256" />
           </svg>
@@ -115,7 +129,7 @@ export default function LandingPage() {
 
         {/* ========== WHY KALDI ========== */}
         <section className="max-w-6xl w-full px-6 py-10 text-center relative z-20">
-          <h2 className="text-4xl md:text-5xl font-heading text-green-800 mb-6 animate-fadeInDown">
+          <h2 className="text-4xl md:text-5xl font-heading text-green-100 mb-6 animate-fadeInDown">
             Why Kaldi?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -182,7 +196,7 @@ export default function LandingPage() {
 
         {/* ========== HIGHLIGHT AI TECH ========== */}
         <section className="max-w-6xl w-full px-6 py-10 md:py-16 text-center relative z-20">
-          <h2 className="text-4xl md:text-5xl font-heading text-green-800 mb-8 animate-fadeInDown">
+          <h2 className="text-4xl md:text-5xl font-heading text-green-100 mb-8 animate-fadeInDown">
             Smart AI, Human Touch
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -211,7 +225,7 @@ export default function LandingPage() {
           <h2 className="text-4xl md:text-5xl font-heading text-green-800 mb-4 animate-fadeInDown">
             Ready to Experience Kaldi?
           </h2>
-          <p className="text-gray-700 mb-8 md:mb-12 text-lg md:text-xl max-w-xl mx-auto animate-fadeInUp">
+          <p className="text-gray-200 mb-8 md:mb-12 text-lg md:text-xl max-w-xl mx-auto animate-fadeInUp">
             Let our AI handle the calls and emails so you can focus on enjoying your meal—no lines,
             no fuss.
           </p>

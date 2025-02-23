@@ -15,7 +15,7 @@ const ProductDisplay: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<'donut' | 'drink'>('donut');
   const [products, setProducts] = useState<Product[]>([
     // Donuts
-    { name: 'Avocado Spread', image: '/fooditems/AvacadoSpread.jpeg', isHighlighted: false, type: 'donut', price: 0.95 },
+  { name: 'Avocado Spread', image: '/fooditems/AvacadoSpread.jpeg', isHighlighted: false, type: 'donut', price: 0.95 },
   { name: 'Baked Apple Croissant', image: '/fooditems/BakedAppleCroissant.jpeg', isHighlighted: false, type: 'donut', price: 3.75 },
   { name: 'Banana Walnut And Pelican Loaf', image: '/fooditems/BananaWalnutAndPelcanLoaf.jpg', isHighlighted: false, type: 'donut', price: 3.25 },
   { name: 'Chocolate Croissant', image: '/fooditems/ChocolateCroissant.jpg', isHighlighted: false, type: 'donut', price: 3.45 },
@@ -82,7 +82,7 @@ const ProductDisplay: React.FC = () => {
               : 'text-gray-600 hover:text-gray-900 bg-gray-100'
           }`}
         >
-          Donuts
+          Foods
         </button>
         <button
           onClick={() => setActiveCategory('drink')}
@@ -133,7 +133,7 @@ const ProductDisplay: React.FC = () => {
               {/* Order Button */}
               <button
                
-                className="mt-3 w-full bg-gray-200 text-blue-900 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-300 transition-colors"
+                className="bg-white/20 backdrop-blur-md border border-white/20 shadow-lg mt-3 w-full bg-gray-200 text-blue-100 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
               >
                 Order
               </button>

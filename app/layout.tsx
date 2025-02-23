@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from 'next/image';
-import UVLogo from '@/public/KnoLabs_logo.png';
+
 import "@/app/globals.css";
 
 export const metadata: Metadata = {
-  title: "Ultravox Demo",
-  description: "Demonstration of using the Ultravox API to create a call with an AI agent.",
+  title: "Kaldi",
+  description: "AI agents in ecommerce and retail",
 };
 
 export default function RootLayout({

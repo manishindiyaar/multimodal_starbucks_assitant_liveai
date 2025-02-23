@@ -58,7 +58,7 @@ export default function Navbar() {
                   transition-colors duration-200
                 "
               >
-                Powered by Bladex Assistant
+                Powered by Kaldi Assistant
               </Link>
             </nav>
           </div>
