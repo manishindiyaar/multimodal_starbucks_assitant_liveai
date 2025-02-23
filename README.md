@@ -18,7 +18,7 @@ Here is the Image which will help you understand:
 
 
 This is How our app look like user just need to click on Assitant button and they will be able to order food without touching screen.
-![image.png](public/showcase/app_home.png)
+![image.png](public/showcase/app_home_page.png)
 
 
 Here is the Demo Link: 
