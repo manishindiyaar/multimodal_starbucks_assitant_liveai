@@ -15,7 +15,22 @@ The way it works is simple. You just need to provide it with a voice command, an
 Here is the Image which will help you understand:
 ![image.png](public/showcase/working_uper.png)
 
+# Guide
 
+```
+git clone https://github.com/manishindiyaar/multimodal_starbucks_assitant_liveai.git
+```
+
+```
+pnpm install
+```
+
+```
+set your ULTRAVOX_API_KEY in your .env.local file 
+```
+```
+pnpm run dev
+```
 
 This is How our app look like user just need to click on Assitant button and they will be able to order food without touching screen.
 ![image.png](public/showcase/app_home_page.png)
