@@ -45,13 +45,13 @@ export default function LandingPage() {
         {/* ========== HERO SECTION ========== */}
         <section className="relative w-full h-[85vh] flex flex-col justify-center items-center overflow-hidden z-10">
           {/* Large Hero Background (Placeholder image) */}
-          <Image
+          {/* <Image
             src=""
             alt="Hero Background"
             fill
             className="object-cover object-center brightness-75 hero-img"
             priority
-          />
+          /> */}
 
           {/* Subtle overlay for text readability */}
           <div className="absolute inset-0 bg-black/40"></div>
